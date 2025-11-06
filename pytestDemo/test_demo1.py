@@ -9,13 +9,13 @@ import pytest
 
 
 @pytest.mark.smoke
-def test_firstprogram():
+def test_firstprogram(setup):
     print("Hello")
 
 @pytest.mark.skip
-def test_secondprogram():
+def test_secondprogram(setup):
     print("i am second program")
 
-
-def test_uiautomation():
+@pytest.mark.xfail
+def test_uiautomation(setup):
     print("I am uiautomation from first file")
