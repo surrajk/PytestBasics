@@ -11,6 +11,8 @@
 10. skip tests with @pytest.mark.skip
 11. fixtures are used as setup and tear down methods for test cases.
 12. conftest file is used to generalise fixtures and make it available to all test cases
+13. data driven and parameterization can be done with return statements in tuple format
+14. when you define fixture scope to class only, it will run once before class is initialized and at the end.
 
 
 
@@ -40,3 +42,7 @@ def setup():
 
 def test_fixtureDemo(setup):
     print("I will execute steps in fixturedemo method")
+
+
+def test_crossbrowser(crossBrowser):
+    print(crossBrowser)
